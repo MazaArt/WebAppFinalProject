@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -14,4 +14,109 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poor+Story&display=swap');
+
+* {
+  font-family: 'Poor Story', sans-serif;
+  font-size: 20px;
+}
+
+body {
+  align-items: auto;
+
+}
+
+.game-body {
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  display: inline-block;
+  margin: auto;
+}
+
+button, input{
+  border: none;
+  border-radius: 10%;
+}
+
+input {
+  width: 90%;
+}
+
+.add-new {
+  color: white;
+  background-color: #CEDCFF;
+  border: none;
+  border-radius: 20%;
+  width: 30px;
+  height: 30px;
+  font-size: 1.2rem;
+  float: right;
+  margin: 10px;
+  position: relative;
+}
+
+.pop-up-content{
+  background-color: #f3dede;
+  position: relative;
+  width: 10%;
+  float: right;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 10%;
+}
+
+.close {
+  align-self: flex-end;
+}
+
+.pop-up-content > *{
+  align-self: flex-start;
+  margin: 10px;
+}
+
+.submit {
+  align-self: flex-end;
+  background-color: #abe3b4;
+}
+
+.categories-container {
+  display: flex;
+  flex-direction: row;
+  margin: 50px auto;
+  width: max-content;
+}
+
+.category-container {
+  display: flex;
+  flex-direction: column;
+  margin:10px
+}
+
+.point-value{
+  display: flex;
+  width: 200px;
+  height: 100px;
+  background-color: #FFD6D6;
+  border-radius: 10%;
+  font-size: 2rem;
+  margin:10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-score {
+  width: 20%;
+  height: 20%;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
 }
