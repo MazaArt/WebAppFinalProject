@@ -11,6 +11,7 @@ function App() {
       setAddNew(!addnew)
   }
   
+
   return (
     <div className="lobby">
       <h1>VideoGame Lobby</h1>
