@@ -26,7 +26,8 @@ function App() {
 
       <div className="posts-container">
         {
-          posts.map((post, i) => {
+          posts.map((post, text, i) => {
+            // return <Posts postsName={post} postsText = {text} i = {i}/>
             return <Posts postsName={post} i = {i}/>
           })
         }
@@ -37,3 +38,4 @@ function App() {
 }
 
 export default App;
+

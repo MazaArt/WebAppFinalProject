@@ -5,17 +5,9 @@ const Posts = (props) => {
     let points = ["100", "200", "300"]
 
     return (
-        <div className="posts-contrainer">
-            <div className = "posts-name"> {props.postsName} </div> 
-            { 
-                points.map((point) => {
-                    return (
-                        <div className = "point-value" style={{backgroundColor: colors[props.i % colors.length]}}>
-                            {point}
-                        </div>
-                    )
-                })
-            }
+        <div className="posts-box" style={{ backgroundColor: colors[props.i % colors.length] }}>
+            {props.postsName}
+            {/* {props.postsText} */}
         </div>
     )   
 }

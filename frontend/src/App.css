@@ -1,38 +1,96 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poor+Story&display=swap');
+
+* {
+  font-family: 'Poor Story', sans-serif;
+  font-size: 20px;
+}
+
+body {
+  align-items:center;
+}
+
+.lobby {
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 400;
+  display: inline-block;
+  margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button, input{
+  border: none;
+  border-radius: 10%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input {
+  width: 90%;
+}
+
+.add-new {
+  color: white;
+  background-color: #CEDCFF;
+  border: none;
+  border-radius: 20%;
+  width: 30px;
+  height: 30px;
+  font-size: 1.2rem;
+  float: right;
+  margin: 10px;
+  position: relative;
+}
+
+pop-up-content{
+  background-color: #f3dede;
+  position: relative;
+  width: 10%;
+  float: right;
   display: flex;
   flex-direction: column;
+  padding: 10px;
+  border-radius: 10%;
+}
+
+.close {
+  align-self: flex-end;
+}
+
+.pop-up-content > *{
+  align-self: flex-start;
+  margin: 10px;
+}
+
+.submit {
+  align-self: flex-end;
+  background-color: #abe3b4;
+}
+
+.posts-container {
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+  width: max-content;
+}
+
+.post-container {
+  display: flex;
+  flex-direction: column;
+  margin:10px
+}
+
+.posts-box{
+  display: flex;
+  width: 200px;
+  height: 100px;
+  background-color: #FFD6D6;
+  border-radius: 10%;
+  font-size: 2rem;
+  margin:10px;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
