@@ -1,8 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poor+Story&display=swap');
 
-* {
+.lobby{
   font-family: 'Poor Story', sans-serif;
   font-size: 20px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
+.navBar{
+    font-family: 'Tangerine';
+    font-size: 100px;
+    text-shadow: 4px 4px 4px #aaa;
+}
+.navigationbar{
+  font-family: 'Tangerine';
+    font-size: 100px;
+    text-shadow: 4px 4px 4px #aaa;
 }
 
 body {
@@ -93,4 +105,10 @@ pop-up-content{
   margin:10px;
   align-items: center;
   justify-content: center;
+}
+
+.navBar {
+  display:flex ;
+  flex-direction: column;
+  align-items: center;
 }
