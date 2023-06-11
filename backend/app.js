@@ -25,7 +25,31 @@ const get_all_sessions = "SELECT * FROM Sessions"
 
 app.get("/session", (req, res) => {
   db.execute(get_all_sessions, (error, results) => {
-    console.log(results)
+    res.status(200).send(results)
+  })
+})
+
+const delete_session = "DELETE FROM Sessions WHERE session_id = ?"
+
+app.delete("/session", (req, res) => {
+  db.execute(delete_session, [req.body.session_id], (error, results) => {
+    res.status(200).send("completed")
+  })
+  // console.log(req.body.session_id)
+})
+
+const create_committment_sql = "INSERT INTO CommittedPlayers (user_email, session_id)  VALUES(?, ?)"
+
+app.post("/commit", (req, res) => {
+  db.execute(create_committment_sql, [req.body.user_email, req.body.session_id], (error, results) => {
+    res.status(200).send("completed")
+  })
+})
+
+const get_players_sql = "SELECT * FROM CommittedPlayers WHERE session_id = ?"
+
+app.get("/commited_players/:id", (req, res) => {
+  db.execute(get_players_sql, [req.params.id], (error, results) => {
     res.status(200).send(results)
   })
 })

@@ -5,6 +5,9 @@ import Profile from "./Profile"
 import { useAuth0 } from "@auth0/auth0-react";
 import CreateSessionForm from './CreateSessionForm';
 import { BrowserRouter as Router,Routes, Route, Link } from 'react-router-dom';
+import Homepage from './Homepage';
+import Menubar from './Menubar';
+import CommittedPlayers from './CommittedPlayers';
 
 function App() {
   const [addnew, setAddNew] = useState(false)
@@ -26,10 +29,11 @@ function App() {
   return (
     <Router>
       <div className="lobby">
-        <LoginButton />
-        <Profile />
+        <Menubar />
         <Routes>
+          <Route exact path='/' element={<Homepage />}></Route>
           <Route exact path='/create' element={<CreateSessionForm />}></Route>
+          <Route path ='/session/:id' element={<CommittedPlayers />}></Route>
         </Routes>
     </div>
     </Router>
