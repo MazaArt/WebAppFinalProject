@@ -1,0 +1,34 @@
+.post {
+  background-color: lightblue;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.post-creator {
+  font-weight: bold;
+}
+
+.post-title {
+  font-size: 20px;
+}
+
+.post-paragraph {
+  margin-top: 5px;
+}
+
+.post-joined-people {
+  margin-top: 5px;
+}
+
+.join-button {
+  margin-top: 10px;
+  background-color: lightgreen;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.join-button:hover {
+  background-color: darkgreen;
+}

@@ -1,15 +1,16 @@
-import React from "react";
+import React from 'react';
+import "./Posts.css";
 
-const Posts = (props) => {
-    let colors = ["#FFD606", "#D6F5FF", "#D9DDFF", "#00FFFF", "#D3FFCE", "#FF1493"]
-    let points = ["100", "200", "300"]
+const Posts = ({ creator, title, paragraph, joinedPeople, onJoin }) => {
+  return (
+    <div className="post">
+      <div className="post-creator">Creator: {creator}</div>
+      <div className="post-title">Title: {title}</div>
+      <div className="post-paragraph">{paragraph}</div>
+      <div className="post-joined-people">Joined People: {joinedPeople}</div>
+      <button className="join-button" onClick={onJoin}>Join</button>
+    </div>
+  );
+};
 
-    return (
-        <div className="posts-box" style={{ backgroundColor: colors[props.i % colors.length] }}>
-            {props.postsName}
-            {/* {props.postsText} */}
-        </div>
-    )   
-}
-
-export default Posts
+export default Posts;

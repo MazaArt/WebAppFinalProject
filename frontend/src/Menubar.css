@@ -1,0 +1,32 @@
+.menubar {
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+.menubar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.menubar li {
+  margin-right: 10px;
+}
+
+.menubar a,
+.menubar button {
+  text-decoration: none;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.menubar a:hover,
+.menubar button:hover {
+  background-color: #45a049;
+}

@@ -1,25 +1,26 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from "axios";
+import "./CommittedPlayers.css";
 
 export default function CommittedPlayers() {
     const { id } = useParams()
-    const [ players, setPlayers ] = useState([])
+    const [players, setPlayers] = useState([])
 
     useEffect(() => {
         const url = "http://localhost:8000/commited_players/" + id
-        
+
         axios.get(url)
-        .then((response) => {
-            // setPlayers(response)
-            console.log(players)
-            setPlayers(response.data)
-          }, (error) => {
-            console.log(error);
-          });
+            .then((response) => {
+                // setPlayers(response)
+                console.log(players)
+                setPlayers(response.data)
+            }, (error) => {
+                console.log(error);
+            });
     }, [])
 
-    return(
+    return (
         <div>
             <ul>
                 {players.map(players => (

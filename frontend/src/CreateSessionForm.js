@@ -1,8 +1,9 @@
 import { useState } from "react"
 import { useAuth0 } from "@auth0/auth0-react";
 import axios from "axios";
+import "./CreateSessionForm.css"
 
-function CreateSessionForm () {
+function CreateSessionForm() {
     const { user, isAuthenticated, isLoading } = useAuth0();
 
     const [gamedPlayed, setGamePlayed] = useState("")
@@ -23,16 +24,16 @@ function CreateSessionForm () {
 
         const customConfig = {
             headers: {
-            'Content-Type': 'application/json'
+                'Content-Type': 'application/json'
             }
         };
 
         axios.post('http://localhost:8000/session', JSON.stringify(payload), customConfig)
-        .then((response) => {
-            console.log(response);
-          }, (error) => {
-            console.log(error);
-          });
+            .then((response) => {
+                console.log(response);
+            }, (error) => {
+                console.log(error);
+            });
 
         console.log(payload)
     }
@@ -52,7 +53,7 @@ function CreateSessionForm () {
                     placeholder="Enter additional text"
                     onChange={e => setAdditionalText(e.target.value)}
                 />
-                <button type = 'submit'>Click to submit</button>
+                <button type='submit'>Click to submit</button>
             </form>
         </div>
     )

@@ -1,24 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poor+Story&display=swap');
 
-.lobby{
+.lobby {
   font-family: 'Poor Story', sans-serif;
   font-size: 20px;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Tangerine');
-.navBar{
-    font-family: 'Tangerine';
-    font-size: 100px;
-    text-shadow: 4px 4px 4px #aaa;
-}
-.navigationbar{
+
+.navBar {
   font-family: 'Tangerine';
-    font-size: 100px;
-    text-shadow: 4px 4px 4px #aaa;
+  font-size: 100px;
+  text-shadow: 4px 4px 4px #aaa;
+}
+
+.navigationbar {
+  font-family: 'Tangerine';
+  font-size: 100px;
+  text-shadow: 4px 4px 4px #aaa;
 }
 
 body {
-  align-items:center;
+  align-items: center;
 }
 
 .lobby {
@@ -35,7 +37,8 @@ h1 {
   margin: auto;
 }
 
-button, input{
+button,
+input {
   border: none;
   border-radius: 10%;
 }
@@ -57,7 +60,7 @@ input {
   position: relative;
 }
 
-pop-up-content{
+pop-up-content {
   background-color: #f3dede;
   position: relative;
   width: 10%;
@@ -72,7 +75,7 @@ pop-up-content{
   align-self: flex-end;
 }
 
-.pop-up-content > *{
+.pop-up-content>* {
   align-self: flex-start;
   margin: 10px;
 }
@@ -92,23 +95,23 @@ pop-up-content{
 .post-container {
   display: flex;
   flex-direction: column;
-  margin:10px
+  margin: 10px
 }
 
-.posts-box{
+.posts-box {
   display: flex;
   width: 200px;
   height: 100px;
   background-color: #FFD6D6;
   border-radius: 10%;
   font-size: 2rem;
-  margin:10px;
+  margin: 10px;
   align-items: center;
   justify-content: center;
 }
 
 .navBar {
-  display:flex ;
+  display: flex;
   flex-direction: column;
   align-items: center;
 }

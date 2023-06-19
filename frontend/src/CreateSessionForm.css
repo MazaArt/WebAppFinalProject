@@ -1,0 +1,30 @@
+.create-session-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.create-session-form input {
+  padding: 8px;
+  margin-bottom: 16px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.create-session-form button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.create-session-form button:hover {
+  background-color: #0056b3;
+}
+
+.create-session-form button:focus {
+  outline: none;
+}

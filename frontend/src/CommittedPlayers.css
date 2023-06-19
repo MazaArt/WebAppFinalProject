@@ -1,0 +1,28 @@
+.committed-players {
+  margin-top: 16px;
+}
+
+.committed-players ul {
+  list-style: none;
+  padding: 0;
+}
+
+.committed-players li {
+  margin-bottom: 8px;
+}
+
+.committed-players li:last-child {
+  margin-bottom: 0;
+}
+
+.committed-players li:before {
+  content: "•";
+  margin-right: 8px;
+  color: #555;
+}
+
+.committed-players li:hover {
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
