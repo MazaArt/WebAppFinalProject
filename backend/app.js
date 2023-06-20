@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const db = require('./db/db_connection.js');
+const db = require('./db/db_connection');
 var cors = require('cors')
 var bodyParser = require('body-parser');
 
@@ -31,7 +31,8 @@ app.get("/session", (req, res) => {
 
 const delete_session = "DELETE FROM Sessions WHERE session_id = ?"
 
-app.delete("/session", (req, res) => {
+app.post("/deletesession", (req, res) => {
+  console.log(req.body.session_id)
   db.execute(delete_session, [req.body.session_id], (error, results) => {
     res.status(200).send("completed")
   })

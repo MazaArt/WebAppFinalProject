@@ -19,15 +19,13 @@ export default function Menubar() {
 
 
   return (
-    <div>
+    <div class = "menubar">
       <ul>
         <li>{email}</li>
         <li><LogoutButton /></li>
         <li><Link to="/">
           <button>Home</button></Link></li>
-        <li><Link to="/profile">
-          <button>Profile</button></Link></li>
-        <li><a href="/create">Create</a></li>
+        <li><a href="/create" class = "create-tt">Create</a></li>
       </ul>
     </div>
   )

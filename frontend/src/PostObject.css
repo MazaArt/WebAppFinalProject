@@ -17,7 +17,6 @@
 }
 
 .post-object-actions {
-    display: flex;
     align-items: center;
     margin-top: 16px;
 }
@@ -45,3 +44,15 @@
     border: none;
     border-top: 1px solid #ddd;
 }
+
+.center_FDS {
+    align-items: center;
+    margin-left: auto;
+}
+
+.centered-container {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 10%);
+  }
+  

@@ -26,12 +26,12 @@ export default function PostObject(props) {
             }
         };
 
-        axios.delete('http://localhost:8000/session', JSON.stringify(payload), customConfig)
+        axios.post('http://localhost:8000/deletesession', JSON.stringify(payload), customConfig)
     }
 
     const createCommitment = (e) => {
         const payload = {
-            user_email: props.user_email,
+            user_email: user.email, 
             session_id: props.session_id
         }
 
@@ -52,18 +52,18 @@ export default function PostObject(props) {
 
     return (
         <div>
-            <div key={props.session_id}>
-                <p>Session ID: {props.session_id}</p>
-                <p>User Email: {props.user_email}</p>
-                <p>Game Played: {props.game_played}</p>
-                <p>Time: {props.time}</p>
-                <p>Additional Info: {props.additional_info}</p>
-                {
-                    deletePerms === false ? <p></p> : <div><button onClick={handleClick}>Press to delete this post</button> <br /></div>
-                }
-                <button onClick={createCommitment}>Create commitment</button> <br />
-                <a href={"/session/" + props.session_id}>See commited players</a>
-                <hr />
+            <div>
+                <div key={props.session_id} class = "post-object-container">
+                    <p>User Email: {props.user_email}</p>
+                    <p>Game Played: {props.game_played}</p>
+                    <p>Time: {props.time}</p>
+                    <p>Additional Info: {props.additional_info}</p>
+                    {
+                        deletePerms === false ? <p></p> : <div><button onClick={handleClick}>Press to delete this post</button> <br /></div>
+                    }
+                    <button onClick={createCommitment} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded">Create commitment</button> <br />
+                    <a href={"/session/" + props.session_id}>See commited players</a>
+                </div>
             </div>
         </div>
     )

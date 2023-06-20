@@ -15,7 +15,16 @@
   margin-right: 10px;
 }
 
-.menubar a,
+.create-tt {
+  text-decoration: none;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 13px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 .menubar button {
   text-decoration: none;
   background-color: #4caf50;
