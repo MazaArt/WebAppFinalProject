@@ -54,6 +54,7 @@ export default function PostObject(props) {
         <div>
             <div>
                 <div key={props.session_id} class = "post-object-container">
+                    
                     <p>User Email: {props.user_email}</p>
                     <p>Game Played: {props.game_played}</p>
                     <p>Time: {props.time}</p>
