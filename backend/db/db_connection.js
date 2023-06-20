@@ -1,15 +1,15 @@
 const mysql = require('mysql2');
-// const dotenv = require('dotenv');
+const dotenv = require('dotenv');
 
-// dotenv.config();
+dotenv.config();
 
 const dbConfig = {
-    host: "sqlclassdb-instance-1.cqjxl5z5vyvr.us-east-2.rds.amazonaws.com",
-    port: parseInt("3306"),
-    user: "pracha23",
-    password: "2SxhMFnYU869",
-    database: "project_artiva23_pracha23_p8_2223t11",
-    connectTimeout: parseInt("10000")
+    host: process.port.PORT,
+    port: process.env.PORT,
+    user: process.env.USER,
+    password: process.env.PASSWORD,
+    database: process.env.DATABASE,
+    connectTimeout: process.env.connectTimeout
 }
 
 const connection = mysql.createConnection(dbConfig);

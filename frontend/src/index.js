@@ -9,8 +9,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Auth0Provider
-    domain="dev-t4lf8wywi7va5sbt.us.auth0.com"
-    clientId="wzV7WRR2X8jDm5T5Ep7P7yLA8xX6zqxK"
+    domain={process.env.DOMAIN}
+    clientId={process.env.clientID}
     authorizationParams={{
       redirect_uri: "http://localhost:3000/"
     }}
